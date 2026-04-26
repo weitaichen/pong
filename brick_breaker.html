@@ -323,8 +323,6 @@ function update(){
     // keyboard
     if(keys.has('ArrowLeft')||keys.has('KeyA')||touchLeft)  padX-=PAD_SPEED;
     if(keys.has('ArrowRight')||keys.has('KeyD')||touchRight) padX+=PAD_SPEED;
-    // mouse (smooth follow)
-    if(mouseX!==null) padX+=(mouseX-cw/2-padX)*0.2;
     padX=clamp(padX,0,W-cw); padW=cw;
 
     ball.spd = slowT>0 ? ballSpd*0.55 : ballSpd;
